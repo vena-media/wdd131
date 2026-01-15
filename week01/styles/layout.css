@@ -1,0 +1,13 @@
+:root {
+    --heading-font: "Times New Roma", "Georgia", serif;
+    --primary-color: #061d90;
+}
+
+header {
+    display: grid;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+}
