@@ -31,7 +31,6 @@ header {
     color: var(--color-light);
     padding: 3rem 2rem 2rem;
     text-align: center;
-    text-decoration: underline solid var(--secondary-color);
 
 }
 
@@ -326,7 +325,7 @@ section p {
 }
 
 footer {
-    background-color: var(--color-text);
+    background-color: var(--text-color);
     color: var(--color-light);
     text-align: center;
     padding: 1.5rem;
