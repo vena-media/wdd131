@@ -229,13 +229,24 @@ section p {
     margin-bottom: 0.35rem;
 }
 
+.font-sample-heading {
+    font-family: var(--font-heading);
+    font-size: 20px;
+}
+
+.font-sample-body {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 900;
+}
+
 .font-meta {
     font-size: 0.89rem;
     color: #777;
     margin-top: 0.5rem;
 }
 
-.font-sample-sub .wireframe-grid {
+.wireframe-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
@@ -280,6 +291,14 @@ section p {
     align-items: center;
 }
 
+.wf-spaced {
+    margin-top: 8px;
+}
+
+.wf-hero-desktop {
+    padding: 22px 8px;
+}
+
 .wf-hero {
     background: var(--color-light);
     border-radius: 4px;
@@ -310,6 +329,8 @@ section p {
     gap: 3px;
     margin-bottom: 8px;
 }
+
+
 
 .wf-card-row.cols-2 {
     grid-template-columns: 1fr 1fr;
