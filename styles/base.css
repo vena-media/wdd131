@@ -30,7 +30,7 @@ header {
 }
 
 #course-title {
-    display: block;
+    /* display: block; */
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -79,14 +79,46 @@ main {
 
 }
 
+.profile {
+    float: left;
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+    margin: 0 1rem 1rem 0;
+    border-radius: 8px;
+
+}
+
+.resources {
+    width: 600px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     outline: 1px solid var(--primary);
-    /* stroke: 5px; */
-    /* outline-color: #0f172a; */
+    /* height: 600px; */
+    overflow: auto;
+}
+
+.about-card {
+    flex: 2;
+    height: fit-content;
+}
+
+.resources-card {
+    flex: 1;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
 }
 
 .card h1,
@@ -94,7 +126,10 @@ main {
     margin: -1.5rem -1.5rem 1rem -1.5rem;
     border-radius: 5px;
     min-height: 60px;
+    /* display: flex; */
     align-items: center;
+    /* justify-content: center; */
+    padding: 0 1rem;
 }
 
 .card h1 {
@@ -111,7 +146,12 @@ main {
 .card h3 {
     background-color: #0f172a;
     color: #3b82f6;
-    width: 200px;
+    width: 100%;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    /* justify-content: center; */
 }
 
 .card img {
@@ -122,11 +162,13 @@ main {
     border-radius: 8px;
 }
 
+
+
 .country {
     display: flex;
     gap: 1.5rem;
-    align-items: center;
-
+    align-items: flex-start;
+    width: 100%;
 }
 
 .country img {
@@ -136,6 +178,7 @@ main {
 
 .card p {
     margin-bottom: 1rem;
+    font-size: 12px;
 }
 
 footer {
