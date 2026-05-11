@@ -165,7 +165,8 @@ main {
 
 
 .country {
-    display: flex;
+    display: grid;
+    grid-template-columns: 150px 1fr;
     gap: 1.5rem;
     align-items: flex-start;
     width: 100%;
