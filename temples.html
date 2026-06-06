@@ -9,15 +9,16 @@
     <meta name="author" content="Ediomo Ibanga">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" media="print" onload="this.media='all'">>
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="script/getdates.js" defer></script>
+    <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>Temple Album</h1>
+        <button id="hamburger" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
         <nav>
             <a href="www.linkedin.com/in/ediomo-ibanga-ba3391220">Home</a>
             <a href=" https://byupw.instructure.com/.">Old</a>
@@ -28,8 +29,56 @@
     </header>
 
     <main>
-        <h1></h1>
+        <h1>Temples of The Church of Jesus Christ of Latter Days Saints</h1>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="Salt Lake Temple">
+            <figcaption>Salt Lake Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="Washington D.C Temple">
+            <figcaption>Washington D.C Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="Los Angeles Temple">
+            <figcaption>Los Angeles Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="Sao Paulo Brazil Temple">
+            <figcaption>Sao Paulo Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="New Zealand Temple">
+            <figcaption>New Zealand Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="Nairobi Kenya Temple">
+            <figcaption>Nairobi Kenya Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="London England Temple">
+            <figcaption>London England Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/first-temple.jpeg" alt="Lagos Nigeria Temple">
+            <figcaption>Lagos Nigeria Temple</figcaption>
+        </figure>
     </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Ediomo Ibanga 🌸
+            Creative Designer 🌸 Brand Development 🌸 Software Developer
+        </p>
+
+        <p id="lastModified"> Last Modified </p>
+    </footer>
 </body>
 
 </html>
