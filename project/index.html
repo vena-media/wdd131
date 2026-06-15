@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vee Bites Blog | Home</title>
+
+    <meta name="description" content="Vee Bites Blog - recipes and honest food reviews">
+    <meta name="author" content="Ediomo Ibanga">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+    <script defer src="scripts/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Vee Bites</h1>
+            <p>Bold Flavours, Honest Reviews</p>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="reviews-contact.html">Reviews & Contact</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h2>Discover Simple Recipes & Honest Food Reviews</h2>
+        <p>Save your favourite recipes and explore new flavours every day.</p>
+
+        <button id="clearSavedBtn">Clear Saved Recipes</button>
+    </section>
+
+
+    <main>
+
+        <section>
+            <h2>Featured Recipes</h2>
+
+            <!-- JS will inject recipe cards here -->
+            <div id="featuredRecipes"></div>
+        </section>
+
+
+        <h2>Your Saved Recipes</h2>
+        <p>Recipes you save will appear here automatically.</p>
+
+        <!-- JS renders from localStorage -->
+        <div id="savedRecipes"></div>
+        </section>
+
+
+        <section>
+            <h2>Latest Reviews</h2>
+
+            <!-- JS injects review cards -->
+            <div id="latestReviews"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vee Bites Blog</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+
+</body>
+
+</html>

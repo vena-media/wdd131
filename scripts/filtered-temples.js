@@ -94,11 +94,17 @@ const temples = [
         dedicated: 2025,
         area: 26163,
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/antofagasta-chile-temple/antofagasta-chile-temple-48608.jpg"
+    },
+    {
+        name: "Dallas Texas",
+        location: "Dallas Texas, United States",
+        dedicated: 1984,
+        area: 44207,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/dallas-texas-temple/dallas-texas-temple-59552.jpg"
     }
 ];
 
 
-// createTempleCard(filteredTemples) {
 function displayTemples(list) {
     const container = document.querySelector(".grid");
     container.innerHTML = "";
@@ -111,7 +117,7 @@ function displayTemples(list) {
       <p>${temple.location}</p>
       <p>Dedicated: ${temple.dedicated}</p>
       <p>Area: ${temple.area} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy">
+      <img src="${temple.imageUrl}" alt=`${ temple.name } ${ temple.location } ` loading="lazy">
     `;
 
         container.appendChild(card);
@@ -125,7 +131,7 @@ document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const filter = e.target.textContent.toLowerCase();
+        const filter = e.target.dataset.filter;
 
         let filteredTemples = temples;
 
