@@ -1,0 +1,128 @@
+:root {
+    --blue: #0D5EAF;
+    --blue-light: #1A7BD4;
+    --white: #FFFFFF;
+    --off-white: #f0f7f0;
+    --text-dark: #1a1a1a;
+    --text-mid: #444;
+    --border: rgba(255, 255, 255, 0.25);
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+header {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card {
+    background: var(--white);
+    padding: 1.5rem 2rem;
+}
+
+.card h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+}
+
+.geo-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.geo-row:last-child {
+    border-bottom: none;
+}
+
+dt {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-mid);
+    text-align: right;
+    min-width: 120px;
+}
+
+dd {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    min-width: 140px;
+}
+
+.weather-icon-mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Pseudo-element weather icon in wide view */
+.weather-heading::after {
+    content: '⛅';
+    display: none;
+    margin-left: 0.4rem;
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}

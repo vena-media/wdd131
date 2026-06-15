@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page</title>
+    <meta name="description"
+        content="A responsive wireframe country page about Greece built for WDD 131 by Ediomo Ibanga.">
+    <meta name="author" content="Ediomo Ibanga">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Greece</h1>
+        <p class="tagline"> Where Myth Meets the Mediterranean</p>
+    </header>
+    <main>
+        <div class="hero-wrapper">
+            <picture>
+                <source media="(min-width:768px)" srcset="images/greece-large.webp" width="1200" height="600"
+                    media="(min-width:500px)" srcset="images/greece-small.webp">
+                <img src="images/greece-small.webp" alt="Blue Domes, Santorini, Greece" width="600" height="400"
+                    class="hero-img">
+            </picture>
+
+            <section class="card data-card">
+                <h2>Data</h2>
+                <dl>
+                    <div class="geo-row">
+                        <dt>Area</dt>
+                        <dd>131,957 sq km</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Population</dt>
+                        <dd>10,718,565</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Capital</dt>
+                        <dd>Athens</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Languages</dt>
+                        <dd>Greek</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Currency</dt>
+                        <dd>Euro (€)</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Time Zone</dt>
+                        <dd>UTC+2</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Calling Code</dt>
+                        <dd>+30</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Internet TLD</dt>
+                        <dd>.gr</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="card weather-card">
+                <h2 class="weather-heading">Weather</h2>
+                <div class="weather-icon-mobile">
+                    <img src="images/weather-sunny.svg" alt="Sunny weather icon" width="64" height="64">
+                </div>
+                <dl>
+                    <div class="geo-row">
+                        <dt>Temperature</dt>
+                        <dd>28 °C</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Conditions</dt>
+                        <dd>Sunny &amp; Clear</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Wind</dt>
+                        <dd>14 km/h</dd>
+                    </div>
+                    <div class="geo-row">
+                        <dt>Wind Chill</dt>
+                        <dd id="wind-chill">--</dd>
+                    </div>
+                </dl>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy;<span id="current-year"></span> ☀️ Greece ☀️</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
