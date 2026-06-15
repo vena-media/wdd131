@@ -117,7 +117,7 @@ function displayTemples(list) {
       <p>${temple.location}</p>
       <p>Dedicated: ${temple.dedicated}</p>
       <p>Area: ${temple.area} sq ft</p>
-      <img src="${temple.imageUrl}" alt=`${ temple.name } ${ temple.location } ` loading="lazy">
+      <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy">
     `;
 
         container.appendChild(card);
@@ -131,7 +131,7 @@ document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const filter = e.target.dataset.filter;
+        const filter = e.target.dataset.filter();
 
         let filteredTemples = temples;
 
