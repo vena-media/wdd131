@@ -24,10 +24,10 @@
     <main>
         <div class="hero-wrapper">
             <picture>
-                <source media="(min-width:768px)" srcset="images/greece-large.webp" width="1200" height="600"
-                    media="(min-width:500px)" srcset="images/greece-small.webp">
+                <source media="(min-width:768px)" srcset="images/greece-large.webp" width="1200" height="600">
+                <source media="(min-width:500px)" srcset="images/greece-small.webp">
                 <img src="images/greece-small.webp" alt="Blue Domes, Santorini, Greece" width="600" height="400"
-                    class="hero-img">
+                    class="hero-img" loading="lazy">
             </picture>
 
             <section class="card data-card">
@@ -71,7 +71,7 @@
             <section class="card weather-card">
                 <h2 class="weather-heading">Weather</h2>
                 <div class="weather-icon-mobile">
-                    <img src="images/weather-sunny.svg" alt="Sunny weather icon" width="64" height="64">
+                    <img src="images/weather-sunny.svg" alt="Sunny weather icon" width="64" height="64" loading="lazy">
                 </div>
                 <dl>
                     <div class="geo-row">
