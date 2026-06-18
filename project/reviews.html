@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Browse Vee Bites recipes — breakfast, lunch, dinner, and more. Filter by category and save your favourites.">
+    <meta name="description" content="Honest restaurant reviews from Vee Bites — Lagos and beyond.">
     <meta name="author" content="Ediomo Ibanga">
-    <title>Recipes — Vee Bites</title>
+    <title>Reviews — Vee Bites</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,8 +25,8 @@
             </button>
             <ul class="nav-links" id="nav-menu" role="list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html" aria-current="page">Recipes</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="reviews.html" aria-current="page">Reviews</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
@@ -36,28 +35,16 @@
     <main>
 
         <div class="page-hero">
-            <h1>Recipes</h1>
-            <p>Simple, satisfying meals <br> From quick breakfasts to proper dinners.</br> </p>
+            <h1>Restaurant Reviews</h1>
+            <p>Honest opinions on places worth (and not worth) your money.</p>
         </div>
 
-        <section class="section" aria-labelledby="recipes-heading">
+        <section class="section" aria-labelledby="reviews-heading">
             <div class="section-inner">
-
-                <h2 class="section-title">All Recipes</h2>
-
-                <!-- Saved recipes banner -->
-                <div class="saved-banner" id="saved-banner" role="status" aria-live="polite"></div>
-
-                <!-- Category filter -->
-                <div class="filter-bar" role="group" aria-label="Filter recipes by category" id="filter-bar">
+                <h2 class="section-title">All Reviews</h2>
+                <div class="review-grid" id="review-grid">
                     <!-- Populated by JS -->
                 </div>
-
-                <!-- Recipe grid -->
-                <div class="card-grid" id="recipe-grid">
-                    <!-- Populated by JS -->
-                </div>
-
             </div>
         </section>
 

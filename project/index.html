@@ -4,75 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Vee Bites Blog | Home</title>
-
-    <meta name="description" content="Vee Bites Blog - recipes and honest food reviews">
+    <title>Vee Bites - Curated Food Experiences Worth Sharing </title>
+    <meta name="description"
+        content="Vee Bites - a personal food blog sharing original recipes and honest restaurant reviews from Lagos and beyond.">
     <meta name="author" content="Ediomo Ibanga">
-
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
     <script defer src="scripts/main.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>Vee Bites</h1>
-            <p>Bold Flavours, Honest Reviews</p>
-        </div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="recipes.html">Recipes</a>
-            <a href="reviews-contact.html">Reviews & Contact</a>
-            <a href="references.html">References</a>
+    <!-- ── Navigation ── -->
+    <header class="site-header">
+        <nav class="nav-inner" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo">Vee <span>Bites</span></a>
+            <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu" role="list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-
-    <section class="hero">
-        <h2>Discover Simple Recipes & Honest Food Reviews</h2>
-        <p>Save your favourite recipes and explore new flavours every day.</p>
-
-        <button id="clearSavedBtn">Clear Saved Recipes</button>
-    </section>
-
-
     <main>
 
-        <section>
-            <h2>Featured Recipes</h2>
-
-            <!-- JS will inject recipe cards here -->
-            <div id="featuredRecipes"></div>
+        <!-- ── Hero ── -->
+        <section class="hero" aria-label="Welcome">
+            <div class="hero-inner">
+                <span class="hero-eyebrow">A personal food blog by Vee</span>
+                <h1>Curated Food Experiences Worth Sharing</h1>
+                <p>Original recipes you can make at home, and honest reviews of restaurants worth your time.</p>
+                <div class="hero-actions">
+                    <a href="recipes.html" class="btn btn-primary">Browse Recipes</a>
+                    <a href="reviews.html" class="btn btn-outline">Read Reviews</a>
+                </div>
+            </div>
         </section>
 
-
-        <h2>Your Saved Recipes</h2>
-        <p>Recipes you save will appear here automatically.</p>
-
-        <!-- JS renders from localStorage -->
-        <div id="savedRecipes"></div>
+        <!-- ── Featured Recipes ── -->
+        <section class="section" aria-labelledby="recipes-heading">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 class="section-title" id="recipes-heading">Featured Recipes</h2>
+                    <a href="recipes.html" class="section-link">View all recipes →</a>
+                </div>
+                <div class="saved-banner" id="saved-banner" role="status" aria-live="polite"></div>
+                <div class="card-grid" id="featured-recipes">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
         </section>
 
+        <!-- ── Latest Reviews ── -->
+        <section class="section section--alt" aria-labelledby="reviews-heading">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 class="section-title" id="reviews-heading">Latest Reviews</h2>
+                    <a href="reviews.html" class="section-link">All reviews →</a>
+                </div>
+                <div class="review-grid" id="featured-reviews">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
 
-        <section>
-            <h2>Latest Reviews</h2>
-
-            <!-- JS injects review cards -->
-            <div id="latestReviews"></div>
+        <!-- ── Submit a Restaurant ── -->
+        <section class="section" id="contact" aria-labelledby="contact-heading">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 class="section-title" id="contact-heading">Suggest a Restaurant</h2>
+                </div>
+                <p class="contact-intro">
+                    Know a place worth reviewing? Send it my way and I might feature it on the blog.
+                </p>
+                <div class="form-card">
+                    <form id="suggest-form" novalidate>
+                        <div class="form-group">
+                            <label for="your-name">Your name</label>
+                            <input type="text" id="your-name" name="your-name" placeholder="e.g. Amaka" required
+                                autocomplete="name">
+                            <span class="form-error" id="name-error">Please enter your name.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="your-email">Your email</label>
+                            <input type="email" id="your-email" name="your-email" placeholder="you@example.com" required
+                                autocomplete="email">
+                            <span class="form-error" id="email-error">Please enter a valid email address.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurant-name">Restaurant name</label>
+                            <input type="text" id="restaurant-name" name="restaurant-name"
+                                placeholder="e.g. The Grill House" required>
+                            <span class="form-error" id="restaurant-error">Please enter the restaurant name.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurant-location">Location</label>
+                            <input type="text" id="restaurant-location" name="restaurant-location"
+                                placeholder="e.g. Victoria Island, Lagos">
+                        </div>
+                        <div class="form-group">
+                            <label for="cuisine-type">Cuisine type</label>
+                            <select id="cuisine-type" name="cuisine-type">
+                                <option value="">— Select a cuisine —</option>
+                                <option value="Nigerian">Nigerian</option>
+                                <option value="African">African</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Asian">Asian</option>
+                                <option value="Fast Food">Fast Food</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="why-suggest">Why should Vee visit?</label>
+                            <textarea id="why-suggest" name="why-suggest"
+                                placeholder="Tell me what makes this place special..."></textarea>
+                            <span class="form-hint">Optional — but the more detail, the better.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit Restaurant</button>
+                        <div class="form-success" id="form-success" role="alert">
+                            Thank you! Your suggestion has been received. I'll check it out soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Vee Bites Blog</p>
-        <p><a href="references.html">References</a></p>
+    <!-- ── Footer ── -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">Vee <span>Bites</span></div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="references.html">References</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Vee Bites. Created by Ediomo Ibanga &mdash; WDD 131</p>
+        </div>
     </footer>
 
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
