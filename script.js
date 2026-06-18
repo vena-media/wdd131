@@ -45,15 +45,3 @@ document.addEventListener("DOMContentLoaded", () => {
             select.appendChild(option);
         });
     }
-
-
-    const counterEl = document.getElementById("counter");
-
-    if (counterEl) {
-        let count = localStorage.getItem("reviewCount") || 0;
-        count = Number(count) + 1;
-
-        localStorage.setItem("reviewCount", count);
-        counterEl.textContent = count;
-    }
-});
